@@ -1,36 +1,52 @@
+# AWS EKS Platform (Terraform)
 
-# Terraform AWS EKS Platform
+## Overview
 
-Production-grade Kubernetes platform automation using Terraform, AWS EKS, and GitHub Actions.
-
----
-
-## Features
-
-- AWS EKS Cluster Provisioning
-- Terraform Infrastructure Modules
-- Kubernetes Deployment Automation
-- GitHub Actions CI/CD
-- Monitoring Integration
-- IAM & RBAC Security
-- Multi-Environment Infrastructure
+This project builds a production-style AWS Kubernetes (EKS) platform using Terraform.  
+It includes networking, compute, IAM security, and scalable Kubernetes infrastructure.
 
 ---
 
-## Technologies
+## Architecture
+Internet
+↓
+Internet Gateway
+↓
+VPC (10.0.0.0/16)
+├── Public Subnet (10.0.1.0/24)
+├── Private Subnet (10.0.2.0/24)
+↓
+EKS Kubernetes Cluster
+↓
+Application Workloads (Pods/Services)
+
+
+---
+
+## Infrastructure Components
+
+- AWS VPC
+- Public & Private Subnets
+- Internet Gateway
+- Route Tables
+- IAM Roles for EKS
+- Kubernetes (EKS Cluster)
+
+---
+
+## Technologies Used
 
 - Terraform
-- AWS EKS
+- AWS (EC2, VPC, EKS, IAM)
 - Kubernetes
-- Docker
-- GitHub Actions
-- Helm
+- GitHub Actions (CI/CD ready)
+- Linux
 
 ---
 
-## Repository Structure
+## Deployment
 
 ```bash
-modules/
-environments/
-scripts/
+terraform init
+terraform plan
+terraform apply
