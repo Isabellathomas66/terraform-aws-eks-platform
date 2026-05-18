@@ -18,7 +18,7 @@ VPC (10.0.0.0/16)
 ↓
 EKS Kubernetes Cluster
 ↓
-Application Workloads (Pods/Services) 
+Application Workloads (Pods/Services)
 
 
 ---
