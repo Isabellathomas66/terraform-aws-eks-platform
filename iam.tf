@@ -14,7 +14,6 @@ resource "aws_iam_role" "eks_role" {
 }
 
 
-*****************************************************************************************
 
 resource "aws_iam_role_policy_attachment" "eks_policy" {
   role       = aws_iam_role.eks_role.name
