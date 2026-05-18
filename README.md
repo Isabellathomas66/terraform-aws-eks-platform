@@ -20,7 +20,6 @@ EKS Kubernetes Cluster
 ↓
 Application Workloads (Pods/Services)
 
-
 ---
 
 ## Infrastructure Components
