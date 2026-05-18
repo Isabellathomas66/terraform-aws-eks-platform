@@ -12,15 +12,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-        
-      - name: Show commit + files
-        run: |
-          echo "COMMIT:"
-          git rev-parse HEAD
-          echo "FILES:"
-          ls -R
-          echo "IAM CONTENT:"
-          sed -n '1,40p' iam.tf
        
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
@@ -33,4 +24,7 @@ jobs:
 
       - name: Terraform Validate
         run: terraform validate
+
+      - name: Terraform Plane
+        run: terraform plan
         
